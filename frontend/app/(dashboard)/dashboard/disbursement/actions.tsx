@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import type { Loan } from "@/lib/types";
 
 export function DisburseButton({ loan }: { loan: Loan }) {
-  const [state, action, pending] = useActionState(async (prev: any, fd: FormData) => {
+  const [state, action, pending] = useActionState(async (prev: unknown, fd: FormData) => {
     const res = await disburseAction(prev, fd);
     if (res?.success) window.location.reload();
     return res;

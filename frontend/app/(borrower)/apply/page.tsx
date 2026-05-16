@@ -35,7 +35,7 @@ function StepIndicator({ current }: { current: number }) {
 
 // Step 1
 function PersonalDetailsStep({ onSuccess }: { onSuccess: () => void }) {
-  const [state, action, pending] = useActionState(async (prev: any, fd: FormData) => {
+  const [state, action, pending] = useActionState(async (prev: unknown, fd: FormData) => {
     const res = await personalDetailsAction(prev, fd);
     if (res?.success) onSuccess();
     return res;
@@ -96,7 +96,7 @@ function PersonalDetailsStep({ onSuccess }: { onSuccess: () => void }) {
 
 // Step 2
 function SalarySlipStep({ onSuccess }: { onSuccess: () => void }) {
-  const [state, action, pending] = useActionState(async (prev: any, fd: FormData) => {
+  const [state, action, pending] = useActionState(async (prev: unknown, fd: FormData) => {
     const res = await uploadSalarySlipAction(prev, fd);
     if (res?.success) onSuccess();
     return res;

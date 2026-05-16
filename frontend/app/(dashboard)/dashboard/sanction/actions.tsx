@@ -18,7 +18,7 @@ import type { Loan } from "@/lib/types";
 export function SanctionActions({ loan }: { loan: Loan }) {
   const [open, setOpen] = useState(false);
   const [mode, setMode] = useState<"approve" | "reject">("approve");
-  const [state, action, pending] = useActionState(async (prev: any, fd: FormData) => {
+  const [state, action, pending] = useActionState(async (prev: unknown, fd: FormData) => {
     const res = await sanctionAction(prev, fd);
     if (res?.success) { setOpen(false); window.location.reload(); }
     return res;
