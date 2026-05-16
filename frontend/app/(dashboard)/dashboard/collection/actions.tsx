@@ -8,7 +8,7 @@ import { Label } from "@/components/ui/label";
 import type { Loan } from "@/lib/types";
 
 export function PaymentForm({ loan }: { loan: Loan }) {
-  const [state, action, pending] = useActionState(async (prev: any, fd: FormData) => {
+  const [state, action, pending] = useActionState(async (prev: unknown, fd: FormData) => {
     const res = await paymentAction(prev, fd);
     if (res?.success) window.location.reload();
     return res;
