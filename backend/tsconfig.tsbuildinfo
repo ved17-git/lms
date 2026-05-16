@@ -1,0 +1,1 @@
+{"root":["./src/index.ts","./src/controller/applicationcontoller.ts","./src/controller/loancontroller.ts","./src/controller/usercontroller.ts","./src/models/applicationmodel.ts","./src/models/loanmode.ts","./src/models/usermodel.ts","./src/routes/route.ts","./src/utils/bre.ts","./src/utils/middleware.ts","./src/utils/seed.ts"],"version":"6.0.3"}
