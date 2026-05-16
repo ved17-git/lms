@@ -11,7 +11,7 @@ A full-stack lending platform where borrowers apply for loans and internal execu
 ```
 lms/
 ├── backend/       # Express + TypeScript API
-└── frontend/      # Next.js 15 App Router
+└── frontend/      # Next.js 16 App Router
 ```
 
 ---
@@ -35,10 +35,9 @@ cp .env.example .env
 
 `.env.example`:
 ```env
-PORT=5000
+PORT=8000
 MONGO_URI=mongodb://localhost:27017/lms
 JWT_SECRET=your_super_secret_key_change_this
-CLIENT_URL=http://localhost:3000
 ```
 
 | Variable | Description |
@@ -89,7 +88,7 @@ npm install
 Create a `.env.local` file in the `frontend/` directory:
 
 ```env
-NEXT_PUBLIC_API_URL=http://localhost:5000/api
+NEXT_PUBLIC_API_URL=http://localhost:8000/api
 ```
 
 ### 3. Run
